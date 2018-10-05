@@ -1,0 +1,33 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react-native",
+    "flowtype",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "strict": [0, "global"],
+    "semi": [2, "never"],
+    "func-names": ["error", "never"],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": [0, { "ignorePureComponents": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {},
+      "node": { "extensions": [
+        ".js",
+        ".android.js",
+        ".ios.js"
+      ]}
+    }
+  },
+  "globals": {
+    "fetch": false,
+    "__DEV__": true
+  }
+}
