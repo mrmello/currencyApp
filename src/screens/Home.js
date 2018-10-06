@@ -6,6 +6,7 @@ import Logo from '../components/logo/Logo'
 
 const styles = EStyleSheet.create({
   home: {
+    flex: 1,
     paddingTop: '$appPaddingTop',
     paddingLeft: '$appPaddingLeft',
     paddingRight: '$appPaddingRight',

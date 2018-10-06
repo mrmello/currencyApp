@@ -1,25 +1,21 @@
 import React from 'react'
-import { ImageBackground, Text, Dimensions } from 'react-native'
-
-const imageWidth = Dimensions.get('window').width / 3
-
-
-const styles = {
-  image: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: imageWidth,
-    height: imageWidth,
-  },
-}
+import EStyleSheet from 'react-native-extended-stylesheet'
+import { Image, View } from 'react-native'
 
 const imageURL = require('../../assets/border-logo.png')
 
+const styles = EStyleSheet.create({
+  logo: {
+    flex: 0.6,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
+
 const Logo = () => (
-  <ImageBackground source={imageURL} style={styles.image}>
-    <Text> logo </Text>
-  </ImageBackground>
-  // <Text> logo </Text>
+  <View style={styles.logo}>
+    <Image source={imageURL} />
+  </View>
 )
 
 export default Logo

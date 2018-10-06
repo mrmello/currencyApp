@@ -7,6 +7,7 @@ const styles = EStyleSheet.create({
     height: '100%',
     width: '100%',
     backgroundColor: '$darkBlue',
+    position: 'absolute',
   },
 })
 const Menu = () => (

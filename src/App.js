@@ -2,23 +2,25 @@ import React, { Component } from 'react'
 import { View, ImageBackground } from 'react-native'
 import Home from './screens/Home'
 import './Styles'
+import Menu from './components/menu/Menu'
 
 const styles = {
   image: {
-    height: '100%',
-    width: '100%',
+    height: '50%',
+    width: '50%',
   },
 }
 
-const imageURL = require('./assets/background-left.png')
+const imageURL = require('./assets/background.png')
 
 export default class App extends Component {
   render() {
     return (
       <View>
-        <ImageBackground source={imageURL} style={styles.image}>
+        <Menu />
+        {/* <ImageBackground source={imageURL} style={styles.image}> */}
           <Home />
-        </ImageBackground>
+        {/* </ImageBackground> */}
       </View>
     )
   }
